@@ -1,0 +1,8 @@
+[build]
+  # We use npx to bypass permission issues with the local node_modules/.bin/tsc
+  command = "npx tsc -b && npx vite build"
+  publish = "dist"
+
+[build.environment]
+  # Ensures Netlify uses a modern Node version
+  NODE_VERSION = "20"
